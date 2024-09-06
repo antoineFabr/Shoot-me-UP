@@ -1,0 +1,9 @@
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHootemUP\SHootemUP\bin\Debug\SHootemUP.exe.config
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHootemUP\SHootemUP\bin\Debug\SHootemUP.exe
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHootemUP\SHootemUP\bin\Debug\SHootemUP.pdb
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHootemUP\SHootemUP\obj\Debug\SHootemUP.csproj.AssemblyReference.cache
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHootemUP\SHootemUP\obj\Debug\SHootemUP.Properties.Resources.resources
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHootemUP\SHootemUP\obj\Debug\SHootemUP.csproj.GenerateResource.cache
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHootemUP\SHootemUP\obj\Debug\SHootemUP.csproj.CoreCompileInputs.cache
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHootemUP\SHootemUP\obj\Debug\SHootemUP.exe
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHootemUP\SHootemUP\obj\Debug\SHootemUP.pdb
