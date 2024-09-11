@@ -26,6 +26,12 @@ namespace ShootMeUp
         }
         static void Main(string[] args)
         {
+            int intVitesse = 3;
+            int intX = 35;
+            int intY = 35;
+
+            Player player1 = new Player(35, 35 , 3);
+
 
         }
     }
