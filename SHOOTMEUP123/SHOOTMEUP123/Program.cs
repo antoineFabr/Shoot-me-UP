@@ -17,6 +17,8 @@ namespace SHOOTMEUP123
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            Enemis Enemis1 = new Enemis(330, 29);
+            
         }
     }
 }

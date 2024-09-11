@@ -20,6 +20,11 @@ namespace SHOOTMEUP123
             int Y = pictureBox1.Location.Y;
 
             // Move the ship
+            if (e.KeyCode == Keys.A && e.KeyCode == Keys.S)
+            {
+                Y -= 3;
+                x += 3;
+            }
             if (e.KeyCode == Keys.D)
             {
                 x += 10;
@@ -37,11 +42,7 @@ namespace SHOOTMEUP123
             {
                 Y += 10;
             }
-            if (e.KeyCode == Keys.A && e.KeyCode == Keys.S)
-            {
-                Y -= 3;
-                x += 3;
-            }
+            
             // Update ship location
             pictureBox1.Location = new Point(x, Y);
 
@@ -62,6 +63,11 @@ namespace SHOOTMEUP123
             Bullet bullet = new Bullet(bulletSpeed, bulletDamage, bulletY, x);
 
             // Implement bullet behavior (e.g., moving the bullet upwards)
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
