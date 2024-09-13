@@ -11,41 +11,19 @@ namespace SHOOTMEUP123
     public class Enemis
     {
 
-        public PictureBox PictureBox2 { get; private set; }
+        public PictureBox uiElement { get; private set; }
        
 
-        private int _X; 
-        private int _Y;
-        
-        
-        public Enemis(int x, int y)
+        public Enemis(int x, int y,PictureBox pb)
         {
-            this._X = x;
-            this._Y = y;
+            this.uiElement = pb;
+            this.uiElement.Left = x;
+            this.uiElement.Top = y;
         }
 
-
-
-
-
-        public void Enemis_Move(object sender, KeyEventArgs e)
+        public void Move()
         {
-
-            int x = PictureBox2.Location.X;
-
-            int y = PictureBox2.Location.Y;
-
-            for (int i = 0; i < 20; i++)
-            {
-                for (int j = 0; j < 50; j++)
-                {
-                    x += 3;
-
-                }
-                y += 3;
-
-            }
-            PictureBox2.Location = new Point(x, y);
+            uiElement.Top++;
         }
 
        

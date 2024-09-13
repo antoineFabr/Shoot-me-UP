@@ -6,18 +6,32 @@ namespace SHOOTMEUP123
 {
     public partial class Form1 : Form
     {
+        
+
+
+        Enemis Enemis1;
+        Bullet bullet1;
+
         public Form1()
         {
+            
+            
             InitializeComponent();
             this.KeyPreview = true;
             this.KeyDown += Form1_KeyDown;
+            Enemis1= new Enemis(330, 29,pictureBox2);
+
+            timer1.Enabled = true;
+
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            
             int x = pictureBox1.Location.X;
 
             int Y = pictureBox1.Location.Y;
+            
 
             // Move the ship
             if (e.KeyCode == Keys.A && e.KeyCode == Keys.S)
@@ -42,51 +56,55 @@ namespace SHOOTMEUP123
             {
                 Y += 10;
             }
+            if (e.KeyCode == Keys.Space)
+            {
+                bullet1= new Bullet(x, Y, Bullet123);
+                
+            }
+            bullet1.BulletShoot();
             
             // Update ship location
             pictureBox1.Location = new Point(x, Y);
+        }
+        class Bullet
+        {
 
-            // Fire bullet on spacebar press
-            if (e.KeyCode == Keys.Space)
+            public PictureBox uiElement { get; private set; }
+            public int _Y;
+            public int _X;
+            public Bullet(int Y, int x,PictureBox pb)
             {
-                FireBullet(x);
+                this._Y = Y;
+                this._X = x; 
+                this.uiElement = pb;
+            }
+
+
+            public void BulletShoot()
+            {
+                uiElement.Visible = true;
+                
+            }
+            public void TirBullet()
+            {
+                int x = uiElement.Location.X;
+                int y = uiElement.Location.Y;
+                _Y = y;
+                _Y--;
+                y = _Y;
+                uiElement.Location = new Point(x, y);
             }
         }
 
-        private void FireBullet(int x)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            int bulletSpeed = 10;
-            int bulletDamage = 1;
-            int bulletY = pictureBox1.Location.Y; // Start the bullet from the ship's Y position
-
-            // Create and fire bullet
-            Bullet bullet = new Bullet(bulletSpeed, bulletDamage, bulletY, x);
-
-            // Implement bullet behavior (e.g., moving the bullet upwards)
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            Enemis1.Move();
+            if (bullet1 != null)
+            {
+                bullet1.TirBullet();
+            }
         }
     }
 
-    // Define Bullet class (this part is missing in the original code)
-    public class Bullet
-    {
-        public int Speed { get; set; }
-        public int Damage { get; set; }
-        public int Y { get; set; }
-        public int X { get; set; }
 
-        public Bullet(int speed, int damage, int y, int x)
-        {
-            Speed = speed;
-            Damage = damage;
-            Y = y;
-            X = x;
-        }
-
-        // Add behavior for bullet movement and collision detection here
-    }
 }

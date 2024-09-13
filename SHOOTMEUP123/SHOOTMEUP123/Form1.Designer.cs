@@ -30,17 +30,22 @@ namespace SHOOTMEUP123
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Bullet123 = new System.Windows.Forms.PictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bullet123)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(316, 320);
+            this.pictureBox1.Location = new System.Drawing.Point(200, 312);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(114, 118);
             this.pictureBox1.TabIndex = 0;
@@ -56,18 +61,31 @@ namespace SHOOTMEUP123
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Bullet123
+            // 
+            this.Bullet123.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bullet123.BackgroundImage")));
+            this.Bullet123.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Bullet123.Location = new System.Drawing.Point(2, 266);
+            this.Bullet123.Name = "Bullet123";
+            this.Bullet123.Size = new System.Drawing.Size(312, 50);
+            this.Bullet123.TabIndex = 2;
+            this.Bullet123.TabStop = false;
+            this.Bullet123.Visible = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox2);
+            this.ClientSize = new System.Drawing.Size(540, 442);
+            this.Controls.Add(this.Bullet123);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bullet123)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,6 +100,9 @@ namespace SHOOTMEUP123
         private System.Windows.Forms.PictureBox pictureBox1;
         private EventHandler pictureBox2_Click;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox Bullet123;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
