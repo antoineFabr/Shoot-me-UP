@@ -36,7 +36,7 @@ namespace SHOOTMEUP123
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Bullet123 = new System.Windows.Forms.PictureBox();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.bullettimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bullet123)).BeginInit();
@@ -55,9 +55,9 @@ namespace SHOOTMEUP123
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(330, 29);
+            this.pictureBox2.Location = new System.Drawing.Point(420, 27);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(73, 50);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -69,19 +69,26 @@ namespace SHOOTMEUP123
             // 
             this.Bullet123.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bullet123.BackgroundImage")));
             this.Bullet123.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Bullet123.Location = new System.Drawing.Point(2, 266);
+            this.Bullet123.Location = new System.Drawing.Point(384, 245);
             this.Bullet123.Name = "Bullet123";
-            this.Bullet123.Size = new System.Drawing.Size(312, 50);
+            this.Bullet123.Size = new System.Drawing.Size(91, 251);
             this.Bullet123.TabIndex = 2;
             this.Bullet123.TabStop = false;
             this.Bullet123.Visible = false;
             // 
+            // bullettimer
+            // 
+            this.bullettimer.Interval = 50;
+            this.bullettimer.Tick += new System.EventHandler(this.bullettimer_Tick);
+            // 
             // Form1
             // 
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(540, 442);
             this.Controls.Add(this.Bullet123);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
+            this.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.Name = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -102,7 +109,7 @@ namespace SHOOTMEUP123
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox Bullet123;
-        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer bullettimer;
     }
 }
 
