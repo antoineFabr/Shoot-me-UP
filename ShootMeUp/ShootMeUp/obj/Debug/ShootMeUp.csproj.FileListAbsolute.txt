@@ -1,7 +1,0 @@
-C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\ShootMeUp\ShootMeUp\bin\Debug\ShootMeUp.exe.config
-C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\ShootMeUp\ShootMeUp\bin\Debug\ShootMeUp.exe
-C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\ShootMeUp\ShootMeUp\bin\Debug\ShootMeUp.pdb
-C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\ShootMeUp\ShootMeUp\obj\Debug\ShootMeUp.csproj.AssemblyReference.cache
-C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\ShootMeUp\ShootMeUp\obj\Debug\ShootMeUp.csproj.CoreCompileInputs.cache
-C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\ShootMeUp\ShootMeUp\obj\Debug\ShootMeUp.exe
-C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\ShootMeUp\ShootMeUp\obj\Debug\ShootMeUp.pdb
