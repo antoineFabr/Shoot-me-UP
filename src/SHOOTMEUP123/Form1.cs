@@ -3,54 +3,73 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace SHOOTMEUP123
 {
     public partial class Form1 : Form
     {
-        
 
 
-        
-        
+
+
+
         List<Bullet> bullets = new List<Bullet>();
         List<Enemi> enemis = new List<Enemi>();
+        List<BulletEnemi> bulletEnemis = new List<BulletEnemi>();
         
         
         public Form1()
         {
-
             
+
             InitializeComponent();
             this.KeyPreview = true;
             this.KeyDown += Form1_KeyDown;
-            Enemi newenemi= new Enemi(0, 50,pictureBox2,this,1);
+            Enemi newenemi = new Enemi(1, 9, pictureBox2, this, 3, 1);
             enemis.Add(newenemi);
-            Enemi newenemi2 = new Enemi(100, 19, pictureBox2,this,2);
+            Enemi newenemi2 = new Enemi(50, 9, pictureBox2, this, 3, 1);
             enemis.Add(newenemi2);
-            Enemi newenemi3 = new Enemi(200, 39, pictureBox2, this,3);
+            Enemi newenemi3 = new Enemi(100, 9, pictureBox2, this, 3, 1);
             enemis.Add(newenemi3);
-            Enemi newenemi4 = new Enemi(300, 9, pictureBox2, this,4);
+            Enemi newenemi4 = new Enemi(150, 9, pictureBox2, this, 3, 1);
             enemis.Add(newenemi4);
-            Enemi newenemi5 = new Enemi(400, 49, pictureBox2,this,5);
-
-
+            Enemi newenemi5 = new Enemi(200, 9, pictureBox2, this, 3, 1);
             enemis.Add(newenemi5);
+            Enemi newenemi6 = new Enemi(250, 9, pictureBox2, this, 3, 1);
+            enemis.Add(newenemi6);
+            Enemi newenemi7 = new Enemi(300, 9, pictureBox2, this, 3, 1);
+            enemis.Add(newenemi7);
+            Enemi newenemi8 = new Enemi(350, 9, pictureBox2, this, 3, 1);
+            enemis.Add(newenemi8);
+            Enemi newenemi9 = new Enemi(400, 9, pictureBox2, this, 3, 1);
+            enemis.Add(newenemi9);
+            Enemi newenemi10 = new Enemi(450, 9, pictureBox2, this, 3, 1);
+            enemis.Add(newenemi10);
+
+
             timer1.Enabled = true;
-            
+            bulletenemitimer.Enabled = true;
 
         }
 
+
+        public int Getwidthfenetre()
+        {
+            int largeurFenetre = this.ClientSize.Width;
+            return largeurFenetre;
+        }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             
-            
+            label1.Text = "Score : " + score;
+
             int nbrbullet = 0;
             int x = pictureBox1.Location.X;
 
             int Y = pictureBox1.Location.Y;
-            
+
 
             // Move the ship
             if (e.KeyCode == Keys.A && e.KeyCode == Keys.S)
@@ -60,117 +79,167 @@ namespace SHOOTMEUP123
             }
             if (e.KeyCode == Keys.D)
             {
-                x += 10;
+                x += 20;
             }
             if (e.KeyCode == Keys.A)
             {
-                x -= 10;
+                x -= 20;
             }
             if (e.KeyCode == Keys.W)
             {
-                Y -= 10;
+                Y -= 20;
             }
 
             if (e.KeyCode == Keys.S)
             {
-                Y += 10;
+                Y += 20;
             }
             if (e.KeyCode == Keys.Space)
             {
                 nbrbullet++;
 
-                Bullet newbullet = new Bullet(x, Y, Bullet123,this); 
+                Bullet newbullet = new Bullet(x, Y, Bullet123, this);
                 newbullet.BulletShoot(x, Y);
                 bullets.Add(newbullet);
-                
+
                 bullettimer.Enabled = true;
-                
+
 
             }
 
 
             // Update ship location
             pictureBox1.Location = new Point(x, Y);
-         
+
         }
-        class Bullet
+        private void timerCreationBullet_Tick(object sender, EventArgs e)
         {
+            int x = pictureBox1.Location.X;
+            BulletEnemi newbullets = new BulletEnemi(x, 1, Bullet123, this);
 
-            public PictureBox uiElement { get; private set; }
-            public int _Y;
-            public int _X;
-            public Bullet(int Y, int x,PictureBox pb,Form1 form)
+            newbullets.BulletShoot(x, 1);
+            bulletEnemis.Add(newbullets);
+        }
+        private void bulletenemitimer_Tick(object sender, EventArgs e)
+        {
+           
+
+            foreach (BulletEnemi bulletEnemi in bulletEnemis.ToList())
             {
-                this._Y = Y;
-                this._X = x; 
-                this.uiElement = new PictureBox();
-                uiElement.BackgroundImage= pb.BackgroundImage;
-                uiElement.SizeMode=pb.SizeMode;
-                uiElement.Location = new System.Drawing.Point(_X, _Y);
-                uiElement.Size = new System.Drawing.Size(91, 251);
-                uiElement.Show();
-                form.Controls.Add(uiElement);
                 
-            }
-
-
-            public void BulletShoot(int x, int y)
-            {
-
-                uiElement.Visible = true;
-                uiElement.Location = new Point(x, y);  
+                if (!bulletEnemi.MoveBulletEnemi())
+                {
+                    bulletEnemis.Remove(bulletEnemi);
+                }
                 
-            }
-            public bool MoveBullet()
-            {
-
-                int x = uiElement.Location.X;
-                int y = uiElement.Location.Y;
-                _Y = y;
-                _Y -= 6;
-                y = _Y;
-                uiElement.Location = new Point(x, y);
-
-                //indique si  encore dans le niveau
-                return y > 0-uiElement.Height;
             }
         }
         private void bullettimer_Tick(object sender, EventArgs e)
         {
             
-            foreach(Bullet bullet in bullets.ToList())
+            foreach (Bullet bullet in bullets.ToList())
             {
+
+                
                 //si le missile sort su niveau, on le supprime
-                if(!bullet.MoveBullet())
+                if (!bullet.MoveBullet())
                 {
                     bullets.Remove(bullet);
                 }
 
 
-                foreach (Bullet bullet1 in bullets.ToList())
-                {
-                    if (bullets.bounds.intersectWith(enemis))
-                    {
-
-                    }
-                }
+                
             }
-            
-            
+
+
         }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
+
             foreach (Enemi newenemi in enemis.ToList())
             {
                 if (!newenemi.Move())
                 {
                     enemis.Remove(newenemi);
                 }
+
+            }
+            CheckCollisionsBullet();
+            CheckCollisionsEnemi();
+        }
+        int score = 0;
+        private void CheckCollisionsBullet()
+        {
+
+            for (int i = bullets.Count - 1; i >= 0; i--)
+            {
+                Bullet bullet = bullets[i];
+                Rectangle bulletRect = bullet.GetPictureBox().Bounds;
+
+                for (int j = enemis.Count - 1; j >= 0; j--)
+                {
+                    Enemi enemi = enemis[j];
+                    Rectangle enemiRect = enemi.GetPictureBox().Bounds;
+
+                    //check si balle touche enemi
+                    if (bulletRect.IntersectsWith(enemiRect))
+                    {
+                        //enleve les 2
+                        this.Controls.Remove(bullet.GetPictureBox());
+                        this.Controls.Remove(enemi.GetPictureBox());
+                        bullets.RemoveAt(i);
+                        enemis.RemoveAt(j);
+                        score++;
+                        label1.Text = "Score : "+ score ;
+                        break;
+                    }
+                }
+            }
+        }
+        private void CheckCollisionsEnemi()
+        {
+
+            for (int i = enemis.Count - 1; i >= 0; i--)
+            {
+                
+                Enemi enemi = enemis[i];
+                Rectangle enemiRect = enemi.GetPictureBox().Bounds;
+                
+                
+               
+                    
+                
+                
+                
+                    Rectangle player = pictureBox1.Bounds;
+                    //check si balle touche enemi
+                    if (enemiRect.IntersectsWith(player))
+                    {
+                        timer1.Enabled = false;
+                        this.Hide();
+                        menugame menugame = new menugame();
+                        menugame.Show();
+                    }
+                
+                
                 
             }
-            
-            
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.Text = "Texte mis à jour depuis un événement";
+        }
+
+        
     }
 
 

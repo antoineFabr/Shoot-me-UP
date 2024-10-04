@@ -15,8 +15,10 @@ namespace SHOOTMEUP123
         private int _Y;
         private int _vitesse;
         private int _nbrHP;
+        bool movingRight = true;
+        int step = 0;
         public PictureBox uiElement { get; private set; }
-       
+        
 
         public Enemi(int x, int y,PictureBox pb,Form1 form,int vitesse,int nbrHP)
         {
@@ -27,7 +29,7 @@ namespace SHOOTMEUP123
             
             _vitesse = vitesse; 
             _nbrHP = nbrHP;
-            uiElement.Size = new System.Drawing.Size(100, 50);
+            uiElement.Size = new System.Drawing.Size(29, 35);
             uiElement.Show();
             form.Controls.Add(uiElement);
             
@@ -40,17 +42,57 @@ namespace SHOOTMEUP123
         {
             int x = uiElement.Location.X;
             int y = uiElement.Location.Y;
-            y += _vitesse;
+
             
- 
+
+            // Étape de déplacement horizontal (vers la droite)
+            if (movingRight == true && step == 0)
+                        uiElement.Left += _vitesse; // Déplacer vers la droite
+
+                    else if (movingRight == false && step == 0)
+                        uiElement.Left -= _vitesse; // Déplacer vers la gauche
+
+                    else if (step == 1)
+                    {
+                        uiElement.Top += 15; // aller vers le bas
+                        if (movingRight == true)
+                        {
+                            uiElement.Left += 3;
+                        }
+
+                        if (movingRight == false)
+                        {
+                    uiElement.Left -= 3;
+                        }
+                        step = 0;
+                    }
            
-            uiElement.Location = new Point(x, y);
+
+            // Vérifier si l'entité a atteint les bords du formulaire
+            if (x >= 499)
+            {
+                movingRight = false;
+                step = 1;
+
+            }
+            else if (x <= 0)
+            {
+                movingRight = true;
+                step = 1;
+            }
 
             //indique si  encore dans le niveau
             return y < 556;
             
         }
-
+        public void sethp(int HPenmoin)
+        {
+            _nbrHP -= HPenmoin;
+        }
+        public PictureBox GetPictureBox()
+        {
+            return uiElement;
+        }
        
 
     }
