@@ -48,7 +48,7 @@ namespace SHOOTMEUP123
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(200, 312);
+            this.pictureBox1.Location = new System.Drawing.Point(969, 892);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(114, 118);
             this.pictureBox1.TabIndex = 0;
@@ -103,13 +103,13 @@ namespace SHOOTMEUP123
             // timerCreationBullet
             // 
             this.timerCreationBullet.Enabled = true;
-            this.timerCreationBullet.Interval = 10000;
+            this.timerCreationBullet.Interval = 1000;
             this.timerCreationBullet.Tick += new System.EventHandler(this.timerCreationBullet_Tick);
             // 
             // Form1
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(629, 498);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Bullet123);
             this.Controls.Add(this.pictureBox1);

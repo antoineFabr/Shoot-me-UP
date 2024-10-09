@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace SHOOTMEUP123
 {
@@ -27,7 +28,7 @@ namespace SHOOTMEUP123
             InitializeComponent();
             this.KeyPreview = true;
             this.KeyDown += Form1_KeyDown;
-            Enemi newenemi = new Enemi(1, 9, pictureBox2, this, 3, 1);
+            Enemi newenemi = new Enemi(1, 9, pictureBox2, this, 10, 1);
             enemis.Add(newenemi);
             Enemi newenemi2 = new Enemi(50, 9, pictureBox2, this, 3, 1);
             enemis.Add(newenemi2);
@@ -94,7 +95,8 @@ namespace SHOOTMEUP123
             {
                 Y += 20;
             }
-            if (e.KeyCode == Keys.Space)
+
+            if (e.KeyCode == Keys.Space) 
             {
                 nbrbullet++;
 
@@ -104,14 +106,14 @@ namespace SHOOTMEUP123
 
                 bullettimer.Enabled = true;
 
-
+                Thread.Sleep(100);
             }
-
-
+           
             // Update ship location
             pictureBox1.Location = new Point(x, Y);
 
         }
+        
         private void timerCreationBullet_Tick(object sender, EventArgs e)
         {
             int x = pictureBox1.Location.X;
@@ -167,8 +169,10 @@ namespace SHOOTMEUP123
             }
             CheckCollisionsBullet();
             CheckCollisionsEnemi();
+            CheckColisionsbulletEnemi();
         }
         int score = 0;
+        int vie = 1;
         private void CheckCollisionsBullet()
         {
 
@@ -197,6 +201,38 @@ namespace SHOOTMEUP123
                 }
             }
         }
+        private void CheckColisionsbulletEnemi()
+        {
+            for (int i = bulletEnemis.Count - 1; i >= 0; i--)
+            {
+                BulletEnemi bulletEnemi = bulletEnemis[i];
+                Rectangle bulletRect = bulletEnemi.GetPictureBox().Bounds;
+
+                Rectangle player = pictureBox1.Bounds;
+
+                //check si balle touche enemi
+                if (bulletRect.IntersectsWith(player))
+                {
+                    //enleve la balle
+                    this.Controls.Remove(bulletEnemi.GetPictureBox());
+                        
+                    bulletEnemis.RemoveAt(i);
+
+                    vie--;
+                    if (vie == 0)
+                    {
+                        timer1.Enabled = false;
+                        this.Hide();
+                        MenuGameOver GameOver = new MenuGameOver();
+                        GameOver.Show();
+                        GameOver.label1.Text = "éviter les Balles ;)aaaw";
+                    }
+                        
+                    break;
+                }
+                
+            }
+        }
         private void CheckCollisionsEnemi()
         {
 
@@ -205,21 +241,17 @@ namespace SHOOTMEUP123
                 
                 Enemi enemi = enemis[i];
                 Rectangle enemiRect = enemi.GetPictureBox().Bounds;
-                
-                
-               
-                    
-                
-                
-                
+            
                     Rectangle player = pictureBox1.Bounds;
-                    //check si balle touche enemi
+
+                    //check si player touche un enemi
                     if (enemiRect.IntersectsWith(player))
                     {
                         timer1.Enabled = false;
                         this.Hide();
-                        menugame menugame = new menugame();
-                        menugame.Show();
+
+                        MenuGameOver GameOver = new MenuGameOver();
+                        GameOver.Show();
                     }
                 
                 
@@ -236,7 +268,7 @@ namespace SHOOTMEUP123
 
         private void label1_Click(object sender, EventArgs e)
         {
-            label1.Text = "Texte mis à jour depuis un événement";
+            label1.Text = "pourquoi tu cliques ici";
         }
 
         

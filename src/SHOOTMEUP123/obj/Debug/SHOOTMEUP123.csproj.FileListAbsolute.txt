@@ -30,3 +30,15 @@ C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTME
 C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.exe
 C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.pdb
 C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.menugame.resources
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.exe.config
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.exe
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.pdb
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.AssemblyReference.cache
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.Form1.resources
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.menugame.resources
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.Properties.Resources.resources
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.GenerateResource.cache
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.CoreCompileInputs.cache
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.exe
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.pdb
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.MenuGameOver.resources

@@ -57,19 +57,19 @@ namespace SHOOTMEUP123
                         uiElement.Top += 15; // aller vers le bas
                         if (movingRight == true)
                         {
-                            uiElement.Left += 3;
+                            uiElement.Left += 5;
                         }
 
                         if (movingRight == false)
                         {
-                    uiElement.Left -= 3;
+                            uiElement.Left -= 5;
                         }
                         step = 0;
                     }
            
 
             // Vérifier si l'entité a atteint les bords du formulaire
-            if (x >= 499)
+            if (x >= 1920 - uiElement.Width)
             {
                 movingRight = false;
                 step = 1;

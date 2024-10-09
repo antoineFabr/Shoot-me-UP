@@ -47,7 +47,7 @@ namespace SHOOTMEUP123
             uiElement.Location = new Point(x, y);
 
             //indique si  encore dans le niveau
-            return y < 537 - uiElement.Height;
+            return y < 1080;
         }
     }
 }
