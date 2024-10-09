@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Bullet.cs" />
     <Compile Include="BulletEnemi.cs" />
+    <Compile Include="BulletUltimate.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Enemi.cs" />
     <Compile Include="Form1.cs">

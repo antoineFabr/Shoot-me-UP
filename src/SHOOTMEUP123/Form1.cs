@@ -6,6 +6,9 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 using System.Threading;
+using System.Runtime.CompilerServices;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 
 namespace SHOOTMEUP123
 {
@@ -19,8 +22,9 @@ namespace SHOOTMEUP123
         List<Bullet> bullets = new List<Bullet>();
         List<Enemi> enemis = new List<Enemi>();
         List<BulletEnemi> bulletEnemis = new List<BulletEnemi>();
-        
-        
+        List<BulletUltimate> ultimates = new List<BulletUltimate>();
+        int cooldown;
+
         public Form1()
         {
             
@@ -53,8 +57,10 @@ namespace SHOOTMEUP123
             timer1.Enabled = true;
             bulletenemitimer.Enabled = true;
 
+            RondScore.Region = GetRoundedImagePictureBox(RondScore);
+            
         }
-
+        
 
         public int Getwidthfenetre()
         {
@@ -64,7 +70,7 @@ namespace SHOOTMEUP123
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             
-            label1.Text = "Score : " + score;
+            label1.Text = "" + score;
 
             int nbrbullet = 0;
             int x = pictureBox1.Location.X;
@@ -96,17 +102,19 @@ namespace SHOOTMEUP123
                 Y += 20;
             }
 
-            if (e.KeyCode == Keys.Space) 
+            if (e.KeyCode == Keys.E) 
             {
                 nbrbullet++;
+                if (cooldown < 1)
+                {
+                    BulletUltimate newultimate = new BulletUltimate(x, Y, Ultimate, this);
+                    newultimate.BulletShoot(x, Y);
+                    ultimates.Add(newultimate);
+                    cooldown = 10;
+                }
+                
+                
 
-                Bullet newbullet = new Bullet(x, Y, Bullet123, this);
-                newbullet.BulletShoot(x, Y);
-                bullets.Add(newbullet);
-
-                bullettimer.Enabled = true;
-
-                Thread.Sleep(100);
             }
            
             // Update ship location
@@ -114,6 +122,22 @@ namespace SHOOTMEUP123
 
         }
         
+        //Cooldown de la competance E
+        private void CoolDown_Tick(object sender, EventArgs e)
+        {
+            if (cooldown > 0)
+            {
+                cooldown -= 1;
+                
+
+            }
+            if (cooldown == 0)
+            {
+                
+            }
+        }
+
+        //Timer pour la creation des bullets Enemis
         private void timerCreationBullet_Tick(object sender, EventArgs e)
         {
             int x = pictureBox1.Location.X;
@@ -136,9 +160,28 @@ namespace SHOOTMEUP123
                 
             }
         }
+
+        //timer pour la creation de balle du joueur
+        private void TimerCrationBall_Tick(object sender, EventArgs e)
+        {
+            int x = pictureBox1.Location.X;
+
+            int Y = pictureBox1.Location.Y;
+            Bullet newbullet = new Bullet(x, Y, Bullet123, this);
+            newbullet.BulletShoot(x, Y);
+            bullets.Add(newbullet);
+
+            bullettimer.Enabled = true;
+        }
         private void bullettimer_Tick(object sender, EventArgs e)
         {
-            
+            foreach (BulletUltimate ultime in ultimates.ToList())
+            {
+                if (!ultime.MoveBullet())
+                {
+                    ultimates.Remove(ultime);
+                }
+            }
             foreach (Bullet bullet in bullets.ToList())
             {
 
@@ -155,6 +198,7 @@ namespace SHOOTMEUP123
 
 
         }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -195,7 +239,7 @@ namespace SHOOTMEUP123
                         bullets.RemoveAt(i);
                         enemis.RemoveAt(j);
                         score++;
-                        label1.Text = "Score : "+ score ;
+                        label1.Text = ""+ score ;
                         break;
                     }
                 }
@@ -225,7 +269,7 @@ namespace SHOOTMEUP123
                         this.Hide();
                         MenuGameOver GameOver = new MenuGameOver();
                         GameOver.Show();
-                        GameOver.label1.Text = "éviter les Balles ;)aaaw";
+                        GameOver.label1.Text = "éviter les Balles ;)";
                     }
                         
                     break;
@@ -259,17 +303,30 @@ namespace SHOOTMEUP123
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
        
 
         private void label1_Click(object sender, EventArgs e)
         {
             label1.Text = "pourquoi tu cliques ici";
+            
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private Region GetRoundedImagePictureBox(PictureBox pictureBox)
+        {
+            GraphicsPath graphicsPath = new GraphicsPath();
+            graphicsPath.AddEllipse(0, 0, pictureBox.Width, pictureBox.Height);
+            Region rg = new Region(graphicsPath);
+            return rg;
+            
+        }
+
+        
 
         
     }
