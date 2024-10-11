@@ -11,8 +11,8 @@ namespace SHOOTMEUP123
     internal class BulletUltimate
     {
         public PictureBox uiElement { get; private set; }
-        public int _Y;
-        public int _X;
+        private int _Y;
+        private int _X;
         
         public BulletUltimate(int Y, int x, PictureBox pb, Form1 form)
         {

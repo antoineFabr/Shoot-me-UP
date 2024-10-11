@@ -42,3 +42,4 @@ C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP
 C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.exe
 C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.pdb
 C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.MenuGameOver.resources
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.MenuGameOver.resources
