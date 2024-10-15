@@ -38,6 +38,7 @@ namespace SHOOTMEUP123
             //this.uiElement.Top = y;
         }
 
+        //methode move pour faire bouger les Enemis
         public bool Move()
         {
             int x = uiElement.Location.X;
@@ -57,7 +58,7 @@ namespace SHOOTMEUP123
                         uiElement.Top += 15; // aller vers le bas
                         if (movingRight == true)
                         {
-                            uiElement.Left += 5;
+                            uiElement.Left += 5; // on est obligé de déplacer a gauche car sinon l'enemi reste toujours au dessus de 1920
                         }
 
                         if (movingRight == false)
@@ -71,7 +72,7 @@ namespace SHOOTMEUP123
             // Vérifier si l'entité a atteint les bords du formulaire
             if (x >= 1920 - uiElement.Width)
             {
-                movingRight = false;
+                movingRight = false;//on met la variable movingright a faux pour qu'il aille ensuite a gauche 
                 step = 1;
 
             }

@@ -1,49 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\",
+  "WorkspaceRootPath": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|c:\\users\\pt52png\\documents\\github\\shoot-me-up\\src\\shootmeup123\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\menugame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\menugame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\menugameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\menugameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\menugameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\bulletultimate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\bulletultimate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\bulletenemi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\bulletenemi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\bulletenemi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\menugameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\menugameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\menugameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\menugame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\bulletultimate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\bulletultimate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|c:\\users\\antoi\\documents\\github\\shoot-me-up\\src\\shootmeup123\\menugame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\menugame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\menugame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\menugame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\enemi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\enemi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\enemi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\shootmeup123\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2E5AB4A-444C-43C5-96CE-BC2461A2A672}|SHOOTMEUP123\\SHOOTMEUP123.csproj|solutionrelative:shootmeup123\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -60,11 +60,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Form1.cs",
               "RelativeDocumentMoniker": "SHOOTMEUP123\\Form1.cs",
-              "ToolTip": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Form1.cs",
+              "ToolTip": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Form1.cs",
               "RelativeToolTip": "SHOOTMEUP123\\Form1.cs",
-              "ViewState": "AQIAACwBAAAAAAAAAAAowDUBAAAMAAAA",
+              "ViewState": "AQIAADkBAAAAAAAAAAAiwEABAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T13:20:53.607Z",
               "IsPinned": true,
@@ -72,11 +72,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Program.cs",
               "RelativeDocumentMoniker": "SHOOTMEUP123\\Program.cs",
-              "ToolTip": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Program.cs",
+              "ToolTip": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Program.cs",
               "RelativeToolTip": "SHOOTMEUP123\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwBQAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -88,58 +88,48 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "Enemi.cs",
-              "DocumentMoniker": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Enemi.cs",
+              "DocumentMoniker": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Enemi.cs",
               "RelativeDocumentMoniker": "SHOOTMEUP123\\Enemi.cs",
-              "ToolTip": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Enemi.cs",
+              "ToolTip": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Enemi.cs",
               "RelativeToolTip": "SHOOTMEUP123\\Enemi.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowDkAAAAwAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAwwEAAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T11:15:09.931Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Class1.cs",
               "RelativeDocumentMoniker": "SHOOTMEUP123\\Class1.cs",
-              "ToolTip": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Class1.cs",
+              "ToolTip": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Class1.cs",
               "RelativeToolTip": "SHOOTMEUP123\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T09:05:03.014Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "menugame.cs",
-              "DocumentMoniker": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\menugame.cs",
+              "DocumentMoniker": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\menugame.cs",
               "RelativeDocumentMoniker": "SHOOTMEUP123\\menugame.cs",
-              "ToolTip": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\menugame.cs",
+              "ToolTip": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\menugame.cs",
               "RelativeToolTip": "SHOOTMEUP123\\menugame.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAcwCAAAAAMAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAUwB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T09:43:15.618Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "menugame.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\menugame.cs",
+              "DocumentMoniker": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\menugame.cs",
               "RelativeDocumentMoniker": "SHOOTMEUP123\\menugame.cs",
-              "ToolTip": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\menugame.cs [Design]",
+              "ToolTip": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\menugame.cs [Design]",
               "RelativeToolTip": "SHOOTMEUP123\\menugame.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T09:41:18.765Z",
@@ -147,11 +137,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Form1.cs",
               "RelativeDocumentMoniker": "SHOOTMEUP123\\Form1.cs",
-              "ToolTip": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\Form1.cs [Design]",
               "RelativeToolTip": "SHOOTMEUP123\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T13:18:37.659Z",
@@ -159,11 +149,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "BulletUltimate.cs",
-              "DocumentMoniker": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\BulletUltimate.cs",
+              "DocumentMoniker": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\BulletUltimate.cs",
               "RelativeDocumentMoniker": "SHOOTMEUP123\\BulletUltimate.cs",
-              "ToolTip": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\BulletUltimate.cs",
+              "ToolTip": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\BulletUltimate.cs",
               "RelativeToolTip": "SHOOTMEUP123\\BulletUltimate.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -172,11 +162,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MenuGameOver.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\MenuGameOver.cs",
+              "DocumentMoniker": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\MenuGameOver.cs",
               "RelativeDocumentMoniker": "SHOOTMEUP123\\MenuGameOver.cs",
-              "ToolTip": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\MenuGameOver.cs [Design]",
+              "ToolTip": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\MenuGameOver.cs [Design]",
               "RelativeToolTip": "SHOOTMEUP123\\MenuGameOver.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-06T13:52:17.262Z",
@@ -184,11 +174,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "BulletEnemi.cs",
-              "DocumentMoniker": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\BulletEnemi.cs",
+              "DocumentMoniker": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\BulletEnemi.cs",
               "RelativeDocumentMoniker": "SHOOTMEUP123\\BulletEnemi.cs",
-              "ToolTip": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\BulletEnemi.cs",
+              "ToolTip": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\BulletEnemi.cs",
               "RelativeToolTip": "SHOOTMEUP123\\BulletEnemi.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAgwBsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -197,11 +187,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "MenuGameOver.cs",
-              "DocumentMoniker": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\MenuGameOver.cs",
+              "DocumentMoniker": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\MenuGameOver.cs",
               "RelativeDocumentMoniker": "SHOOTMEUP123\\MenuGameOver.cs",
-              "ToolTip": "C:\\Users\\pt52png\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\MenuGameOver.cs",
+              "ToolTip": "C:\\Users\\antoi\\Documents\\GitHub\\Shoot-me-UP\\src\\SHOOTMEUP123\\MenuGameOver.cs",
               "RelativeToolTip": "SHOOTMEUP123\\MenuGameOver.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAADwvykAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

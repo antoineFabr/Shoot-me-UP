@@ -1,14 +1,9 @@
-﻿using SHOOTMEUP123.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Windows.Forms;
-using System.Threading;
-using System.Runtime.CompilerServices;
 using System.Drawing.Drawing2D;
-using System.Drawing.Imaging;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace SHOOTMEUP123
 {
@@ -42,8 +37,8 @@ namespace SHOOTMEUP123
 
         public Form1()
         {
-            
 
+            Enemi newenemi0;
             InitializeComponent();
             this.KeyPreview = true;
             this.KeyDown += Form1_KeyDown;
@@ -174,7 +169,18 @@ namespace SHOOTMEUP123
                 }         
             }
         }
-
+        private void CheckSiGameWin()
+        {
+            
+            if (enemis.Count == 0)
+            {
+                this.Close();
+                MenuGameOver win = new MenuGameOver();
+                win.Show();
+                win.label1.Text = "Bravo vous avez gagné";
+                win.label4.Text = "Game Win";
+            }
+        }
         //timer pour la creation de balle du joueur
         private void TimerCrationBall_Tick(object sender, EventArgs e)
         {
@@ -220,6 +226,7 @@ namespace SHOOTMEUP123
             CheckCollisionsEnemi();
             CheckColisionsbulletEnemi();
             CheckCollisionsUltime();
+            CheckSiGameWin();
         }
 
         int score = 0;
@@ -247,9 +254,9 @@ namespace SHOOTMEUP123
                     if (bulletRect.IntersectsWith(enemiRect))
                     {
                         //enleve les 2
-                        this.Controls.Remove(bullet.GetPictureBox());
+                        
                         this.Controls.Remove(enemi.GetPictureBox());
-                        ultimates.RemoveAt(i);
+                        
                         enemis.RemoveAt(j);
                         score++;
                         label1.Text = "" + score;
@@ -323,6 +330,7 @@ namespace SHOOTMEUP123
                 {
                     //enleve la balle
                     this.Controls.Remove(bulletEnemi.GetPictureBox());
+                    this.Controls.Remove(pictureBox1);
                         
                     bulletEnemis.RemoveAt(i);
 
@@ -334,6 +342,8 @@ namespace SHOOTMEUP123
                         MenuGameOver GameOver = new MenuGameOver();
                         GameOver.Show();
                         GameOver.label1.Text = "éviter les Balles ;)";
+                        GameOver.label4.Text = "Game Over";
+                        
                     }     
                     break;
                 }  
