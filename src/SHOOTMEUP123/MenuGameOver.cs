@@ -41,5 +41,12 @@ namespace SHOOTMEUP123
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            this.Hide();
+            form.Show();
+        }
     }
 }

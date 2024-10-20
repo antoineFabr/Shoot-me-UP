@@ -37,5 +37,10 @@ namespace SHOOTMEUP123
             form1.Show();
             
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

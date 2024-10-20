@@ -35,6 +35,10 @@ namespace SHOOTMEUP123
 
         int levelattaquebase = 1; //variable pour savoir combien de fois l'attaque de base a ete amelioré
 
+        int levelattaqueultime = 1;
+
+        int nbrVague = 0;
+
         public Form1()
         {
 
@@ -43,26 +47,7 @@ namespace SHOOTMEUP123
             this.KeyPreview = true;
             this.KeyDown += Form1_KeyDown;
             //creation de 11 enemis et on les ajouts a la liste enemis
-            Enemi newenemi = new Enemi(1, 9, pictureBox2, this, 10, 1);
-            enemis.Add(newenemi);
-            Enemi newenemi2 = new Enemi(50, 9, pictureBox2, this, 3, 1);
-            enemis.Add(newenemi2);
-            Enemi newenemi3 = new Enemi(100, 9, pictureBox2, this, 3, 1);
-            enemis.Add(newenemi3);
-            Enemi newenemi4 = new Enemi(150, 9, pictureBox2, this, 3, 1);
-            enemis.Add(newenemi4);
-            Enemi newenemi5 = new Enemi(200, 9, pictureBox2, this, 3, 1);
-            enemis.Add(newenemi5);
-            Enemi newenemi6 = new Enemi(250, 9, pictureBox2, this, 3, 1);
-            enemis.Add(newenemi6);
-            Enemi newenemi7 = new Enemi(300, 9, pictureBox2, this, 3, 1);
-            enemis.Add(newenemi7);
-            Enemi newenemi8 = new Enemi(350, 9, pictureBox2, this, 3, 1);
-            enemis.Add(newenemi8);
-            Enemi newenemi9 = new Enemi(400, 9, pictureBox2, this, 3, 1);
-            enemis.Add(newenemi9);
-            Enemi newenemi10 = new Enemi(450, 9, pictureBox2, this, 3, 1);
-            enemis.Add(newenemi10);
+            
 
 
             timer1.Enabled = true;
@@ -78,61 +63,65 @@ namespace SHOOTMEUP123
             int largeurFenetre = this.ClientSize.Width;
             return largeurFenetre;
         }
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void moveplayer_Tick(object sender, EventArgs e)
         {
-            
-            label1.Text = "" + score;
-
-            int nbrbullet = 0;
-            int x = pictureBox1.Location.X;
-
-            int Y = pictureBox1.Location.Y;
-
-
-            // Move the ship
-            if (e.KeyCode == Keys.A && e.KeyCode == Keys.S)
+            private void Form1_KeyDown(object sender, KeyEventArgs e)
             {
-                Y -= 3;
-                x += 3;
-            }
 
-            if (e.KeyCode == Keys.D)
-            {
-                x += 20;
-            }
+                label1.Text = "" + score;
 
-            if (e.KeyCode == Keys.A)
-            {
-                x -= 20;
-            }
+                int nbrbullet = 0;
+                int x = pictureBox1.Location.X;
 
-            if (e.KeyCode == Keys.W)
-            {
-                Y -= 20;
-            }
+                int Y = pictureBox1.Location.Y;
 
-            if (e.KeyCode == Keys.S)
-            {
-                Y += 20;
-            }
 
-            if (e.KeyCode == Keys.E) 
-            {
-                nbrbullet++;
-                if (cooldown < 1)
+                // Move the ship
+                if (e.KeyCode == Keys.A && e.KeyCode == Keys.S)
                 {
-                    BulletUltimate newultimate = new BulletUltimate(x, Y, Ultimate, this);
-                    newultimate.BulletShoot(x, Y);
-                    ultimates.Add(newultimate);
-                    cooldown = 10;
+                    Y -= 3;
+                    x += 3;
                 }
+
+                if (e.KeyCode == Keys.D)
+                {
+                    x += 20;
+                }
+
+                if (e.KeyCode == Keys.A)
+                {
+                    x -= 20;
+                }
+
+                if (e.KeyCode == Keys.W)
+                {
+                    Y -= 20;
+                }
+
+                if (e.KeyCode == Keys.S)
+                {
+                    Y += 20;
+                }
+
+                if (e.KeyCode == Keys.E)
+                {
+                    nbrbullet++;
+                    if (cooldown < 1)
+                    {
+                        BulletUltimate newultimate = new BulletUltimate(x, Y, Ultimate, this);
+                        newultimate.BulletShoot(x, Y);
+                        ultimates.Add(newultimate);
+                        cooldown = 10;
+                    }
+                }
+
+                // Update ship location
+                pictureBox1.Location = new Point(x, Y);
             }
-           
-            // Update ship location
-            pictureBox1.Location = new Point(x, Y);
+
+            //Cooldown de la competance E
         }
-        
-        //Cooldown de la competance E
+
         private void CoolDown_Tick(object sender, EventArgs e)
         {
             if (cooldown > 0)
@@ -172,7 +161,7 @@ namespace SHOOTMEUP123
         private void CheckSiGameWin()
         {
             
-            if (enemis.Count == 0)
+            if (enemis.Count == 0 && nbrVague == 5)
             {
                 this.Close();
                 MenuGameOver win = new MenuGameOver();
@@ -227,6 +216,7 @@ namespace SHOOTMEUP123
             CheckColisionsbulletEnemi();
             CheckCollisionsUltime();
             CheckSiGameWin();
+            CreationVagueEnemi();
         }
 
         int score = 0;
@@ -288,7 +278,7 @@ namespace SHOOTMEUP123
                         enemis.RemoveAt(j);
                         score++;
                         label1.Text = ""+ score ;
-                        XPlevel += 6;
+                        XPlevel += 1;
                         break;
                     }
                 }
@@ -309,9 +299,23 @@ namespace SHOOTMEUP123
                     button1.Enabled = true;
                     button1.Visible = true;
                 }
+                else
+                {
+                    button1.Enabled = false;
+                    button1.Visible = false;
+                }
+                if (levelattaqueultime <=4)
+                {
+                    button2.Enabled = true;
+                    button2.Visible = true;
+                }
+                else
+                {
+                    button2.Enabled = false;
+                    button2.Visible = false;
+                }
                 
-                button2.Enabled = true;
-                button2.Visible =true;
+                
                 label3.Text = level.ToString();
             }
             
@@ -415,14 +419,98 @@ namespace SHOOTMEUP123
             }
         }
 
+        //methode si on clique sur le boutton 2 on ameliore l'ultime
         private void button2_Click(object sender, EventArgs e)
         {
+            //on ajoute 1 a cette variable pour savoir combien de fois on a amelioré
+            levelattaqueultime += 1;
+
+            //a refaire les ameliorations 
             rapiditétirdebs -= 80;
             button1.Enabled = false;
             button1.Visible = false;
             button2.Enabled = false;
             button2.Visible = false;
+            if ( levelattaqueultime == 2)
+            {
+                pictureBox23.Visible = true;
+            }
+            if (levelattaqueultime == 3)
+            {
+                pictureBox24.Visible = true;
+            }
+            if (levelattaqueultime == 4)
+            {
+                pictureBox25.Visible = true;
+            }
+            if (levelattaqueultime == 5)
+            {
+                pictureBox26.Visible = true;
+            }
         }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        //methode pour créer des enemis
+        private void VagueEnemi(int vitesse)
+        {
+            //création de 10 Enemis et on les mets dans la liste enemis
+            Enemi newenemi = new Enemi(1, 9, pictureBox2, this, vitesse, 1);
+            enemis.Add(newenemi);
+            Enemi newenemi2 = new Enemi(190, 9, pictureBox2, this, vitesse, 1);
+            enemis.Add(newenemi2);
+            Enemi newenemi3 = new Enemi(380, 9, pictureBox2, this, vitesse, 1);
+            enemis.Add(newenemi3);
+            Enemi newenemi4 = new Enemi(570, 9, pictureBox2, this, vitesse, 1);
+            enemis.Add(newenemi4);
+            Enemi newenemi5 = new Enemi(760, 9, pictureBox2, this, vitesse, 1);
+            enemis.Add(newenemi5);
+            Enemi newenemi6 = new Enemi(950, 9, pictureBox2, this, vitesse, 1);
+            enemis.Add(newenemi6);
+            Enemi newenemi7 = new Enemi(1140, 9, pictureBox2, this, vitesse, 1);
+            enemis.Add(newenemi7);
+            Enemi newenemi8 = new Enemi(1330, 9, pictureBox2, this, vitesse, 1);
+            enemis.Add(newenemi8);
+            Enemi newenemi9 = new Enemi(1520, 9, pictureBox2, this, vitesse, 1);
+            enemis.Add(newenemi9);
+            Enemi newenemi10 = new Enemi(1710, 9, pictureBox2, this, vitesse, 1);
+            enemis.Add(newenemi10);
+        }
+
+        //methode pour créer des vagues d'enemis
+        private void CreationVagueEnemi()
+        {
+            //si en fonction de la vague les enemis créer auront pas la meme vitesse
+            if (nbrVague == 0)
+            {
+                VagueEnemi(6);
+                nbrVague += 1;
+            }
+            if (enemis.Count == 0 && nbrVague ==1)
+            {
+                VagueEnemi(10);
+                nbrVague += 1;
+            }
+            if (enemis.Count == 0 && nbrVague == 2)
+            {
+                VagueEnemi(14);
+                nbrVague += 1;
+            }
+            if (enemis.Count == 0 && nbrVague == 3)
+            {
+                VagueEnemi(18);
+                nbrVague += 1;
+            }
+            if (enemis.Count == 0 && nbrVague == 4)
+            {
+                VagueEnemi(22);
+                nbrVague += 1;
+            }
+        }
+
+        
     }
 
 

@@ -74,6 +74,7 @@ namespace SHOOTMEUP123
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.moveplayer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bullet123)).BeginInit();
@@ -119,12 +120,13 @@ namespace SHOOTMEUP123
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(499, 186);
+            this.pictureBox2.Location = new System.Drawing.Point(567, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 35);
+            this.pictureBox2.Size = new System.Drawing.Size(100, 101);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Visible = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // timer1
             // 
@@ -217,9 +219,9 @@ namespace SHOOTMEUP123
             // Ultimate
             // 
             this.Ultimate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Ultimate.BackgroundImage")));
-            this.Ultimate.Location = new System.Drawing.Point(958, 320);
+            this.Ultimate.Location = new System.Drawing.Point(956, 320);
             this.Ultimate.Name = "Ultimate";
-            this.Ultimate.Size = new System.Drawing.Size(84, 282);
+            this.Ultimate.Size = new System.Drawing.Size(86, 282);
             this.Ultimate.TabIndex = 8;
             this.Ultimate.TabStop = false;
             this.Ultimate.Visible = false;
@@ -493,6 +495,7 @@ namespace SHOOTMEUP123
             this.label3.Size = new System.Drawing.Size(25, 25);
             this.label3.TabIndex = 34;
             this.label3.Text = "1";
+           
             // 
             // Form1
             // 
@@ -535,7 +538,7 @@ namespace SHOOTMEUP123
             this.Controls.Add(this.Ultimate);
             this.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.Name = "Form1";
-            this.Text = "  ";
+            this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -622,6 +625,7 @@ namespace SHOOTMEUP123
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.PictureBox pictureBox27;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer moveplayer;
     }
 }
 

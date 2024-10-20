@@ -29,7 +29,7 @@ namespace SHOOTMEUP123
             
             _vitesse = vitesse; 
             _nbrHP = nbrHP;
-            uiElement.Size = new System.Drawing.Size(29, 35);
+            uiElement.Size = new System.Drawing.Size(100,101);
             uiElement.Show();
             form.Controls.Add(uiElement);
             
@@ -55,7 +55,7 @@ namespace SHOOTMEUP123
 
                     else if (step == 1)
                     {
-                        uiElement.Top += 15; // aller vers le bas
+                        uiElement.Top += 25; // aller vers le bas
                         if (movingRight == true)
                         {
                             uiElement.Left += 5; // on est obligé de déplacer a gauche car sinon l'enemi reste toujours au dessus de 1920
