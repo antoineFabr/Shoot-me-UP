@@ -10,9 +10,6 @@ namespace SHOOTMEUP123
     public partial class Form1 : Form
     {
 
-
-
-
         // creation de la liste des balles du joueur
         List<Bullet> bullets = new List<Bullet>();
 
@@ -35,106 +32,102 @@ namespace SHOOTMEUP123
 
         int levelattaquebase = 1; //variable pour savoir combien de fois l'attaque de base a ete amelioré
 
-        int levelattaqueultime = 1;
+        int levelattaqueultime = 1; //variable pour savoir combien de fois l'ultime a ete ameliore
 
-        int nbrVague = 0;
+        int nbrVague = 0;   //variable pour compter le nombre de vague 
+
+        int score = 0;  //variable pour compter le score 
+
+        int vie = 1;    //variable qui compte la vie du joueur
 
         public Form1()
         {
 
-            Enemi newenemi0;
             InitializeComponent();
             this.KeyPreview = true;
             this.KeyDown += Form1_KeyDown;
-            //creation de 11 enemis et on les ajouts a la liste enemis
-            
 
+            timer1.Enabled = true;  //lancement du timer 1
 
-            timer1.Enabled = true;
-            bulletenemitimer.Enabled = true;
+            bulletenemitimer.Enabled = true;    //lancement du timer pour bouger les balles des Enemis
 
-            RondScore.Region = GetRoundedImagePictureBox(RondScore);
+            RondScore.Region = GetRoundedImagePictureBox(RondScore);    //rendre rond le fond deriere le score
             
         }
         
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            label1.Text = "" + score;   //changement du text du label 1 pour afficher le score
 
-        public int Getwidthfenetre()
-        {
-            int largeurFenetre = this.ClientSize.Width;
-            return largeurFenetre;
-        }
-        private void moveplayer_Tick(object sender, EventArgs e)
-        {
-            private void Form1_KeyDown(object sender, KeyEventArgs e)
+            int nbrbullet = 0;  //variable pour compter le nombre d'ultime tiré
+
+            int x = pictureBox1.Location.X; //variable pour savoir ou se trouve le vaisseau sur l'axe X
+
+            int Y = pictureBox1.Location.Y; //variable pour savoir ou se trouve le vaisseau sur l'axe Y
+
+            //si on appuie sur d le vaisseau se deplace a droite
+            if (e.KeyCode == Keys.D)
             {
-
-                label1.Text = "" + score;
-
-                int nbrbullet = 0;
-                int x = pictureBox1.Location.X;
-
-                int Y = pictureBox1.Location.Y;
-
-
-                // Move the ship
-                if (e.KeyCode == Keys.A && e.KeyCode == Keys.S)
+                x += 20;
+            }
+            //si on appuie sur a le vaisseau se deplace a gauche
+            if (e.KeyCode == Keys.A)
+            {
+                x -= 20;
+            }
+            //si on appuie sur w le vaisseau se deplace en haut
+            if (e.KeyCode == Keys.W)
+            {
+                Y -= 20;
+            }
+            //si on appuie sur s le vaisseau se deplace en bas
+            if (e.KeyCode == Keys.S)
+            {
+                Y += 20;
+            }
+            //si on appuie sur e on crée un ultime 
+            if (e.KeyCode == Keys.E)
+            {
+                //ajout de 1 au nombre d'ultime tirer
+                nbrbullet++;
+                //si le cooldown est a zero on peut tirer
+                if (cooldown < 1)
                 {
-                    Y -= 3;
-                    x += 3;
+                    //on créer l'ultime
+                    BulletUltimate newultimate = new BulletUltimate(x, Y, Ultimate, this);
+                    //on appele la methode pour rendre la balle visible 
+                    newultimate.BulletShoot(x, Y);
+                    //on ajoute cet ultime dans la liste ultimates
+                    ultimates.Add(newultimate);
+                    //et on remet le cooldown a 10 secondes
+                    cooldown = 10;
                 }
-
-                if (e.KeyCode == Keys.D)
-                {
-                    x += 20;
-                }
-
-                if (e.KeyCode == Keys.A)
-                {
-                    x -= 20;
-                }
-
-                if (e.KeyCode == Keys.W)
-                {
-                    Y -= 20;
-                }
-
-                if (e.KeyCode == Keys.S)
-                {
-                    Y += 20;
-                }
-
-                if (e.KeyCode == Keys.E)
-                {
-                    nbrbullet++;
-                    if (cooldown < 1)
-                    {
-                        BulletUltimate newultimate = new BulletUltimate(x, Y, Ultimate, this);
-                        newultimate.BulletShoot(x, Y);
-                        ultimates.Add(newultimate);
-                        cooldown = 10;
-                    }
-                }
-
+            }
                 // Update ship location
                 pictureBox1.Location = new Point(x, Y);
-            }
-
-            //Cooldown de la competance E
         }
 
+        //Cooldown de l'ultime
         private void CoolDown_Tick(object sender, EventArgs e)
         {
+            //si le cooldown est au dessus de zero 
             if (cooldown > 0)
             {
+                //on affiche l'image opaque de la competence
                 pictureBox6.Show();
+                //on enleve 1 au cooldown 
                 cooldown -= 1;
-
+                //on affiche les secondes restante du cooldown 
                 label2.Text = cooldown.ToString();
+                //on affiche le label 2 pour afficher le cooldown
                 label2.Visible = true;
             }
+            //si le cooldown est a 0
             if (cooldown == 0)
             {
+                //on desaffiche le label 2 qui affiche le cooldown
                 label2.Visible = false;
+                //et on cache la picture box qui affiche l'image opaque de la competence 
                 pictureBox6.Hide();
             }
         }
@@ -142,30 +135,41 @@ namespace SHOOTMEUP123
         //Timer pour la creation des bullets Enemis
         private void timerCreationBullet_Tick(object sender, EventArgs e)
         {
+            //variable pour savoir ou est le vaisseau
             int x = pictureBox1.Location.X;
+            //on créer une balle enemi qui sera juste au dessus du vaisseau du joueur
             BulletEnemi newbullets = new BulletEnemi(x, 1, Bullet123, this);
-
+            //on affiche la balle 
             newbullets.BulletShoot(x, 1);
+            //et on ajoute la balle a la liste bulletEnemis
             bulletEnemis.Add(newbullets); 
-        }
+        } 
+        //timer pour bouger les balles enemis
         private void bulletenemitimer_Tick(object sender, EventArgs e)
         {
+            //boucle foreach pour faire avancer toute les balles qui sont dans la liste bulletEnemis
             foreach (BulletEnemi bulletEnemi in bulletEnemis.ToList())
             {         
+                //si la balle n'avance pas on la remove 
                 if (!bulletEnemi.MoveBulletEnemi())
                 {
                     bulletEnemis.Remove(bulletEnemi);
                 }         
             }
         }
+        //methode pour voir si le joueur a gagné 
         private void CheckSiGameWin()
         {
-            
+            //si le nombre d'enemi est a zero et que on est la vague numero cinq
             if (enemis.Count == 0 && nbrVague == 5)
             {
+                //on ferme la fenetre du jeu (Form1)
                 this.Close();
+                //on créer la fenetre de fin
                 MenuGameOver win = new MenuGameOver();
+                //on l'affiche 
                 win.Show();
+                //on affiche qu'on a gagné
                 win.label1.Text = "Bravo vous avez gagné";
                 win.label4.Text = "Game Win";
             }
@@ -173,25 +177,34 @@ namespace SHOOTMEUP123
         //timer pour la creation de balle du joueur
         private void TimerCrationBall_Tick(object sender, EventArgs e)
         {
+            //variable pour savoir la position du joueur sur l'axe des x
             int x = pictureBox1.Location.X;
-
+            //variable pour savoir la position du joueur sur l'axe des y
             int Y = pictureBox1.Location.Y;
+            //on crée la balle 
             Bullet newbullet = new Bullet(x, Y, Bullet123, this);
+            //on l'affiche la ou se trouve le vaisseau 
             newbullet.BulletShoot(x, Y);
+            //et on ajoute la balle a la liste bullets
             bullets.Add(newbullet);
-
+            //ensuite on active le timer qui fait bouger la balle
             bullettimer.Enabled = true;
+            //on change la rapidité du timer en fonction de cette variable 
             TimerCrationBall.Interval = rapiditétirdebs;
         }
+        //timer pour faire bouger les balles
         private void bullettimer_Tick(object sender, EventArgs e)
         {
+            //foreach pour faire avancer toute les ultimes qui sont dans la liste ulitmates
             foreach (BulletUltimate ultime in ultimates.ToList())
             {
+                //si la balle ne bouge plus on la remove
                 if (!ultime.MoveBullet())
                 {
                     ultimates.Remove(ultime);
                 }
             }
+            //foreach pour faire avancer toute les balles qui sont dans la liste bullets
             foreach (Bullet bullet in bullets.ToList())
             {            
                 //si le missile sort su niveau, on le supprime
@@ -201,9 +214,10 @@ namespace SHOOTMEUP123
                 }              
             }
         }      
-
+        //timer pour faire avancer les enemis et aussi appele des methodes
         private void timer1_Tick(object sender, EventArgs e)
         {
+            //foreach pour faire avancer tous les enemis qui sont dans la liste enemis
             foreach (Enemi newenemi in enemis.ToList())
             {
                 if (!newenemi.Move())
@@ -211,58 +225,69 @@ namespace SHOOTMEUP123
                     enemis.Remove(newenemi);
                 }
             }
+            //appele de la methode qui check si une balle touche un enemi
             CheckCollisionsBullet();
+            //appele de la methode qui check si un enemi rentre en colision avec le vaisseau du joueur
             CheckCollisionsEnemi();
+            //appele de la methode qui check si les balles des enemis touchent le vaisseau du joueur
             CheckColisionsbulletEnemi();
+            //appele de la methode qui check si la balle de l'ultime touche des enemis
             CheckCollisionsUltime();
+            //appele de la methode qui check si la partie est gagnée 
             CheckSiGameWin();
+            //appele de la methode qui créer des vagues d'énemis
             CreationVagueEnemi();
         }
-
-        int score = 0;
-        int vie = 1;
-
+        //timer pour appeler la methode LevelUp
         private void timerLevelUp_Tick(object sender, EventArgs e)
         {         
             LevelUp();         
         }
+        //methode pour check si l'ultime touche des enemis
         private void CheckCollisionsUltime()
         {
+            //boucle for qui se repete le nombre d'ultimate qu'il y a 
             for (int i = ultimates.Count - 1; i >= 0; i--)
             {
+                //on appele chaque ultime dans la liste ultimates
                 BulletUltimate bullet = ultimates[i];
+                //et avec cet ultime on va créer un rectangle en fonction de la picture box de cet ultime
                 Rectangle bulletRect = bullet.GetPictureBox().Bounds;
-
+                //boucle for pour faire la meme chose mais avec les enemis
                 for (int j = enemis.Count - 1; j >= 0; j--)
                 {
                     Enemi enemi = enemis[j];
-                    
                     Rectangle enemiRect = enemi.GetPictureBox().Bounds;
-                   
 
-                    //check si balle touche enemi
+                    //check si l'ultime touche un enemi
                     if (bulletRect.IntersectsWith(enemiRect))
                     {
-                        //enleve les 2
-                        
+                        //donc si la balle touche un enemi l'enemi il est enlevé mais la balle continue son chemin
                         this.Controls.Remove(enemi.GetPictureBox());
-                        
+                        //donc on enleve cette enemi de la liste
                         enemis.RemoveAt(j);
-                        score++;
+                        //on ajoute de plus 1 au score
+                        score += 1;
+                        //on affiche le score qui a changé 
                         label1.Text = "" + score;
+                        //et on ajoute 1 d'experience 
                         XPlevel += 1;
                         break;
                     }
                 }
             }
         }
+        //methode qui va check si une balle touche un enemi
         private void CheckCollisionsBullet()
         {
+            //boucle for qui se repete en fonction du nombre de balle qu'il y a dans le jeu 
             for (int i = bullets.Count - 1; i >= 0; i--)
             {
+                //on appele chaque balle dans la liste bullets
                 Bullet bullet = bullets[i];
+                //et avec cet balle on va créer un rectangle en fonction de la picture box de cet balle 
                 Rectangle bulletRect = bullet.GetPictureBox().Bounds;
-
+                //check si l'ultime touche un enemi
                 for (int j = enemis.Count - 1; j >= 0; j--)
                 {
                     Enemi enemi = enemis[j];
@@ -271,19 +296,24 @@ namespace SHOOTMEUP123
                     //check si balle touche enemi
                     if (bulletRect.IntersectsWith(enemiRect))
                     {
-                        //enleve les 2
+                        //on enleve la balle et l'enemi touché 
                         this.Controls.Remove(bullet.GetPictureBox());
                         this.Controls.Remove(enemi.GetPictureBox());
+                        //on les enleve aussi de leur list aussi
                         bullets.RemoveAt(i);
                         enemis.RemoveAt(j);
-                        score++;
+                        //on ajoute 1 au score aussi
+                        score += 1;
+                        //on change le score affiché aussi
                         label1.Text = ""+ score ;
+                        //et on ajoute 1 d'experience
                         XPlevel += 1;
                         break;
                     }
                 }
             }
         }
+        //methode pour monter de niveau
         private void LevelUp()
         {
             //si on passe d'un niveau
@@ -299,11 +329,13 @@ namespace SHOOTMEUP123
                     button1.Enabled = true;
                     button1.Visible = true;
                 }
+                //sinon on ne l'affiche pas
                 else
                 {
                     button1.Enabled = false;
                     button1.Visible = false;
                 }
+                
                 if (levelattaqueultime <=4)
                 {
                     button2.Enabled = true;
@@ -314,31 +346,34 @@ namespace SHOOTMEUP123
                     button2.Enabled = false;
                     button2.Visible = false;
                 }
-                
-                
+                //on modifie le niveau affiché
                 label3.Text = level.ToString();
             }
-            
         }
+        //methode pour savoir si une balle enemi rentre en colision avec le vaisseau du joueur
         private void CheckColisionsbulletEnemi()
         {
+            //boucle for qui se repete le nombre de fois qu'il y a de balle enemis dans le jeu
             for (int i = bulletEnemis.Count - 1; i >= 0; i--)
             {
+                //on appele chaque qu'il y a dans la liste bulletEnemis
                 BulletEnemi bulletEnemi = bulletEnemis[i];
+                //et avec cette balle on va créer un rectangle en fonction de la picture box de cette balle enemi
                 Rectangle bulletRect = bulletEnemi.GetPictureBox().Bounds;
-
+                //on va faire la meme chose avec la picture box du vaisseau du joueur
                 Rectangle player = pictureBox1.Bounds;
 
                 //check si balle touche enemi
                 if (bulletRect.IntersectsWith(player))
                 {
-                    //enleve la balle
+                    //enleve la balle et le vaisseau
                     this.Controls.Remove(bulletEnemi.GetPictureBox());
                     this.Controls.Remove(pictureBox1);
-                        
+                    //enleve la balle de la liste
                     bulletEnemis.RemoveAt(i);
-
-                    vie--;
+                    //on enleve une vie au joueur
+                    vie -= 1;
+                    //si il n'y a plus de vie 
                     if (vie == 0)
                     {
                         timer1.Enabled = false;
