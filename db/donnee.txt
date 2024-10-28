@@ -1,0 +1,84 @@
+-- Données pour T_joueur
+INSERT INTO T_joueur (sprite, cooldownultimate, vitesse, vitessedetir, nom)
+VALUES 
+   ('sprite_joueur1.png', 5, 3, 4, 'Amelie'),
+   ('sprite_joueur2.png', 8, 4, 3, 'Timmy'),
+   ('sprite_joueur3.png', 6, 2, 5, 'Charlie'),
+   ('sprite_joueur4.png', 7, 5, 3, 'Delta'),
+   ('sprite_joueur5.png', 9, 3, 4, 'Echo'),
+   ('sprite_joueur6.png', 4, 5, 2, 'Foxtrot'),
+   ('sprite_joueur7.png', 6, 3, 5, 'Golf'),
+   ('sprite_joueur8.png', 5, 2, 4, 'Hotel'),
+   ('sprite_joueur9.png', 3, 4, 3, 'India'),
+   ('sprite_joueur10.png', 7, 5, 3, 'Juliet');
+
+-- Données pour T_niveau
+INSERT INTO T_niveau (nomniveau)
+VALUES 
+   ('La montgne infernal'),
+   ('La montgne infernal suite'),
+   ('les mines givrées'),
+   ('les mines givrées suite'),
+   ('Niveau 5'),
+   ('Niveau 6'),
+   ('Niveau 7'),
+   ('Niveau 8'),
+   ('Niveau 9'),
+   ('Niveau 10');
+
+-- Données pour T_score
+INSERT INTO T_score (score, datedecreation, fkjoueur, fkniveau)
+VALUES 
+   (1200, '2024-10-01 15:30:00', 1, 1),
+   (980, '2024-10-02 12:45:00', 2, 2),
+   (1500, '2024-10-03 18:00:00', 3, 3),
+   (1340, '2024-10-04 10:15:00', 4, 4),
+   (1580, '2024-10-05 14:20:00', 5, 5),
+   (1100, '2024-10-06 19:30:00', 6, 6),
+   (1420, '2024-10-07 11:00:00', 7, 7),
+   (1260, '2024-10-08 13:45:00', 8, 8),
+   (1600, '2024-10-09 17:30:00', 9, 9),
+   (1350, '2024-10-10 20:00:00', 10, 10);
+
+-- Données pour T_ennemi
+INSERT INTO T_ennemi (vitesse, sprite, nombrehp, vitesse_tir, fkniveau)
+VALUES 
+   (3, 'sprite_ennemi1.png', 3, 4, 1),
+   (4, 'sprite_ennemi2.png', 5, 3, 2),
+   (2, 'sprite_ennemi3.png', 7, 2, 3),
+   (5, 'sprite_ennemi4.png', 6, 5, 4),
+   (3, 'sprite_ennemi5.png', 4, 3, 5),
+   (5, 'sprite_ennemi6.png', 3, 5, 6),
+   (2, 'sprite_ennemi7.png', 8, 2, 7),
+   (4, 'sprite_ennemi8.png', 5, 3, 8),
+   (3, 'sprite_ennemi9.png', 6, 4, 9),
+   (2, 'sprite_ennemi10.png', 7, 2, 10),
+   (5, 'sprite_ennemi11.png', 9, 5, 10);
+
+-- Données pour T_obstacle
+INSERT INTO T_obstacle (sprite, nombrehp, fkniveau)
+VALUES 
+   ('sprite_obstacle1.png', 4, 1),
+   ('sprite_obstacle2.png', 5, 2),
+   ('sprite_obstacle3.png', 3, 3),
+   ('sprite_obstacle4.png', 6, 4),
+   ('sprite_obstacle5.png', 2, 5),
+   ('sprite_obstacle6.png', 7, 6),
+   ('sprite_obstacle7.png', 3, 7),
+   ('sprite_obstacle8.png', 5, 8),
+   ('sprite_obstacle9.png', 4, 9),
+   ('sprite_obstacle10.png', 6, 10);
+
+-- Données pour T_jouer (association joueur-niveau)
+INSERT INTO T_jouer (fkjoueur, fkniveau)
+VALUES 
+   (1, 1),
+   (2, 2),
+   (3, 3),
+   (4, 4),
+   (5, 5),
+   (6, 6),
+   (7, 7),
+   (8, 8),
+   (9, 9),
+   (10, 10);
