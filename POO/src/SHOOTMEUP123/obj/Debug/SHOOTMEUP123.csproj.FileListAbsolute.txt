@@ -1,0 +1,45 @@
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.exe.config
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.exe
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.pdb
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.AssemblyReference.cache
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.Form1.resources
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.Properties.Resources.resources
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.GenerateResource.cache
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.CoreCompileInputs.cache
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.exe
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.pdb
+C:\Users\pt52png\OneDrive - Education Vaud\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.exe.config
+C:\Users\pt52png\OneDrive - Education Vaud\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.exe
+C:\Users\pt52png\OneDrive - Education Vaud\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.pdb
+C:\Users\pt52png\OneDrive - Education Vaud\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.AssemblyReference.cache
+C:\Users\pt52png\OneDrive - Education Vaud\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.SuggestedBindingRedirects.cache
+C:\Users\pt52png\OneDrive - Education Vaud\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.Form1.resources
+C:\Users\pt52png\OneDrive - Education Vaud\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.Properties.Resources.resources
+C:\Users\pt52png\OneDrive - Education Vaud\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.GenerateResource.cache
+C:\Users\pt52png\OneDrive - Education Vaud\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.CoreCompileInputs.cache
+C:\Users\pt52png\OneDrive - Education Vaud\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.exe
+C:\Users\pt52png\OneDrive - Education Vaud\Documents\GitHub\Shoot-me-UP\SHOOTMEUP123\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.pdb
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.AssemblyReference.cache
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.Form1.resources
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.Properties.Resources.resources
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.GenerateResource.cache
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.CoreCompileInputs.cache
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.exe
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.pdb
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.exe.config
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.exe
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.pdb
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.menugame.resources
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.exe.config
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.exe
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\bin\Debug\SHOOTMEUP123.pdb
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.AssemblyReference.cache
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.Form1.resources
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.menugame.resources
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.Properties.Resources.resources
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.GenerateResource.cache
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.csproj.CoreCompileInputs.cache
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.exe
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.pdb
+C:\Users\antoi\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.MenuGameOver.resources
+C:\Users\pt52png\Documents\GitHub\Shoot-me-UP\src\SHOOTMEUP123\obj\Debug\SHOOTMEUP123.MenuGameOver.resources
