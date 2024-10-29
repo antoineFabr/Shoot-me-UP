@@ -1,0 +1,13 @@
+
+CREATE USER 'ShootMeUp'@'%' IDENTIFIED BY 'motdepasse';
+GRANT SELECT, INSERT, UPDATE ON db_ShootMeUp.T_score TO 'ShootMeUp'@'%';
+GRANT SELECT ON db_ShootMeUp.T_obstacle TO 'ShootMeUp'@'%';
+GRANT SELECT ON db_ShootMeUp.T_score TO 'ShootMeUp'@'%';
+GRANT SELECT ON db_ShootMeUp.T_niveau TO 'ShootMeUp'@'%';
+GRANT SELECT, UPDATE ON db_ShootMeUp.T_jouer TO 'ShootMeUp'@'%';
+
+CREATE USER 'admin'@'%' IDENTIFIED BY 'mot_de_passe';
+GRANT ALL PRIVILEGES ON db_ShootMeUp.* TO 'admin'@'%';
+GRANT GRANT OPTION ON db_ShootMeUp.* TO 'admin'@'%';
+
+CREATE USER 'Joueur1'@'%' IDENTIFIED BY '12345';
