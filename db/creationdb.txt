@@ -1,0 +1,54 @@
+CREATE TABLE T_joueur(
+   joueurid INT AUTO_INCREMENT,
+   sprite VARCHAR(50),
+   cooldownultimate TINYINT,
+   vitesse TINYINT,
+   vitessedetir TINYINT,
+   nom VARCHAR(50),
+   PRIMARY KEY(joueurid)
+);
+
+CREATE TABLE T_niveau(
+   niveauid INT AUTO_INCREMENT,
+   nomniveau VARCHAR(50),
+   PRIMARY KEY(niveauid)
+);
+
+CREATE TABLE T_score(
+   scoreid INT AUTO_INCREMENT,
+   score INT,
+   datedecreation DATETIME,
+   fkjoueur INT NOT NULL,
+   fkniveau INT NOT NULL,
+   PRIMARY KEY(scoreid),
+   FOREIGN KEY(fkjoueur) REFERENCES T_joueur(joueurid),
+   FOREIGN KEY(fkniveau) REFERENCES T_niveau(niveauid)
+);
+
+CREATE TABLE T_ennemi(
+   ennemiid INT AUTO_INCREMENT,
+   vitesse TINYINT,
+   sprite VARCHAR(50),
+   nombrehp TINYINT,
+   vitesse_tir TINYINT,
+   fkniveau INT NOT NULL,
+   PRIMARY KEY(ennemiid),
+   FOREIGN KEY(fkniveau) REFERENCES T_niveau(niveauid)
+);
+
+CREATE TABLE T_obstacle(
+   obstacleid INT AUTO_INCREMENT,
+   sprite VARCHAR(50),
+   nombrehp TINYINT,
+   fkniveau INT NOT NULL,
+   PRIMARY KEY(obstacleid),
+   FOREIGN KEY(fkniveau) REFERENCES T_niveau(niveauid)
+);
+
+CREATE TABLE T_jouer(
+   fkjoueur INT,
+   fkniveau INT,
+   PRIMARY KEY(fkjoueur, fkniveau),
+   FOREIGN KEY(fkjoueur) REFERENCES T_joueur(joueurid),
+   FOREIGN KEY(fkniveau) REFERENCES T_niveau(niveauid)
+);

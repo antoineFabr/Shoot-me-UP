@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SHOOTMEUP123.Bullet">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAIAAAAAAAAAAAAAAAAAQAAIAQAAAAAAAAAgA=</HashCode>
+      <FileName>Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.BulletEnemi">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAABAAAAAAAAAAAAAQAAAAAAAAAgA=</HashCode>
+      <FileName>BulletEnemi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.BulletUltimate">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAIAAAAAAAAAAAAAAAAAQAAIAQAAAAAAAAAgA=</HashCode>
+      <FileName>BulletUltimate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.Enemi">
+    <Position X="9" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIIAAAQAAAEAAAAAAAAQgAgAQAAAAEAAAAgA=</HashCode>
+      <FileName>Enemi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.Form1">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBUMIjwAKbAAg1AAAICIQAaDACEZIIAgQGAsIAVshAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.menugame">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAEA4AAAAAEAIAABAAAI=</HashCode>
+      <FileName>menugame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.MenuGameOver">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAABAAAACAAAASACAYAAAAAGAAAAAAAAA=</HashCode>
+      <FileName>MenuGameOver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.Program">
+    <Position X="10.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.Properties.Resources">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.Properties.Settings">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
