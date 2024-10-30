@@ -169,7 +169,7 @@ namespace SHOOTMEUP123
             // timerCreationBullet
             // 
             this.timerCreationBullet.Enabled = true;
-            this.timerCreationBullet.Interval = 100000;
+            this.timerCreationBullet.Interval = 3000;
             this.timerCreationBullet.Tick += new System.EventHandler(this.timerCreationBullet_Tick);
             // 
             // pictureBox3
@@ -495,7 +495,6 @@ namespace SHOOTMEUP123
             this.label3.Size = new System.Drawing.Size(25, 25);
             this.label3.TabIndex = 34;
             this.label3.Text = "1";
-           
             // 
             // Form1
             // 
