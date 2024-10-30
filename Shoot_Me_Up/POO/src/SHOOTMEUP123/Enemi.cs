@@ -11,41 +11,33 @@ namespace SHOOTMEUP123
 {
     public class Enemi
     {
-        private int _X;
-        private int _Y;
-        private int _vitesse;
-        private int _nbrHP;
-        bool movingRight = true;
-        int step = 0;
-        public PictureBox uiElement { get; private set; }
+        private int _X; //variable pour choisir la position sur l'axe des X de l'ennemi
+        private int _Y; //variable pour choisir la position sur l'axe des Y de l'ennemi
+        private int _vitesse;   //variable pour choisir la vitesse de l'ennemi
+        private int _nbrHP; //variable pour choisir le nombre de vie 
+        bool movingRight = true;    //variable pour savoir si les ennemis doivent aller a gauche ou a droite 
+        int step = 0;   //variable pour savoir si l'ennemi va descendre 
+        public PictureBox uiElement { get; private set; }   //la picture box est mis dans uiElement
         
-
+        //constructeur de la classe
         public Enemi(int x, int y,PictureBox pb,Form1 form,int vitesse,int nbrHP)
         {
             this.uiElement = new PictureBox();
             uiElement.BackgroundImage = pb.BackgroundImage;
-            
             uiElement.Location = new System.Drawing.Point(x,y);
-            
             _vitesse = vitesse; 
             _nbrHP = nbrHP;
             uiElement.Size = new System.Drawing.Size(100,101);
             uiElement.Show();
             form.Controls.Add(uiElement);
-            
-            //this.uiElement = pb;
-            //this.uiElement.Left = x;
-            //this.uiElement.Top = y;
         }
 
         //methode move pour faire bouger les Enemis
         public bool Move()
         {
+            //recuperation de la position de l'ennemi
             int x = uiElement.Location.X;
             int y = uiElement.Location.Y;
-
-            
-
             // Étape de déplacement horizontal (vers la droite)
             if (movingRight == true && step == 0)
                         uiElement.Left += _vitesse; // Déplacer vers la droite
@@ -86,10 +78,12 @@ namespace SHOOTMEUP123
             return y < 556;
             
         }
+        //methode pour enlever de la vie a l'ennemi
         public void sethp(int HPenmoin)
         {
             _nbrHP -= HPenmoin;
         }
+        //methode pour avoir la picture box de l'ennemi
         public PictureBox GetPictureBox()
         {
             return uiElement;

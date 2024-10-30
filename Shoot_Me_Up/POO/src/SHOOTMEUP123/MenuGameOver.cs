@@ -26,14 +26,11 @@ namespace SHOOTMEUP123
         {
 
         }
-
+        //methode si on clique sur le bouton 1 ca cache cette fenetre et ca ouvre la fenetre 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            
+            this.Hide();     
             menugame menugame = new menugame();
-
-
             menugame.Show();
         }
 
@@ -41,7 +38,7 @@ namespace SHOOTMEUP123
         {
 
         }
-
+        //si on clique sur le bouton 2 ca ferme cette fenetre et ca ouvre la fenetre de jeu 
         private void button2_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();

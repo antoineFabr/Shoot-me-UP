@@ -16,6 +16,7 @@ namespace SHOOTMEUP123
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //quand on lance l'application ca lance en premier le menu de base
             Application.Run(new menugame());
             
            
