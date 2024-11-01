@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SHOOTMEUP123.Bullet">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAIAAAAAAAAAAAAAAAAAQAAIAQAAAAAAAAAgA=</HashCode>
+      <FileName>Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.BulletEnemi">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAABAAAAAAAAAAAAAQAAAAAAAAAgA=</HashCode>
+      <FileName>BulletEnemi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.BulletUltimate">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAIAAAAAAAAAAAAAAAAAQAAIAQAAAAAAAAAgA=</HashCode>
+      <FileName>BulletUltimate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.Enemi">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIIAAAQAAAEAAAAAAAAQgAgAQAAAAEAAAAgA=</HashCode>
+      <FileName>Enemi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.Form1">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="Bullet123" Hidden="true" />
+      <Field Name="bulletenemitimer" Hidden="true" />
+      <Field Name="bullettimer" Hidden="true" />
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="CoolDown" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Method Name="pictureBox1_Click" Hidden="true" />
+      <Field Name="pictureBox10" Hidden="true" />
+      <Field Name="pictureBox11" Hidden="true" />
+      <Field Name="pictureBox12" Hidden="true" />
+      <Field Name="pictureBox13" Hidden="true" />
+      <Field Name="pictureBox14" Hidden="true" />
+      <Field Name="pictureBox15" Hidden="true" />
+      <Field Name="pictureBox16" Hidden="true" />
+      <Field Name="pictureBox17" Hidden="true" />
+      <Field Name="pictureBox18" Hidden="true" />
+      <Field Name="pictureBox19" Hidden="true" />
+      <Field Name="pictureBox2" Hidden="true" />
+      <Field Name="pictureBox2_Click" Hidden="true" />
+      <Field Name="pictureBox20" Hidden="true" />
+      <Field Name="pictureBox21" Hidden="true" />
+      <Field Name="pictureBox22" Hidden="true" />
+      <Field Name="pictureBox23" Hidden="true" />
+      <Field Name="pictureBox24" Hidden="true" />
+      <Field Name="pictureBox25" Hidden="true" />
+      <Field Name="pictureBox26" Hidden="true" />
+      <Field Name="pictureBox27" Hidden="true" />
+      <Field Name="pictureBox3" Hidden="true" />
+      <Field Name="pictureBox4" Hidden="true" />
+      <Field Name="pictureBox5" Hidden="true" />
+      <Field Name="pictureBox6" Hidden="true" />
+      <Field Name="pictureBox7" Hidden="true" />
+      <Field Name="pictureBox8" Hidden="true" />
+      <Field Name="pictureBox9" Hidden="true" />
+      <Field Name="RondScore" Hidden="true" />
+      <Field Name="timer1" Hidden="true" />
+      <Field Name="TimerCrationBall" Hidden="true" />
+      <Field Name="timerCreationBullet" Hidden="true" />
+      <Field Name="timerLevelUp" Hidden="true" />
+      <Field Name="Ultimate" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QBUOIjwAIbAAg1AAAICIQIaDACEZIIAgQGAsIAVshAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.menugame">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="button3" Hidden="true" />
+      <Field Name="button4" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="pictureBox2" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAEA4AAAAAEAIAABAAAI=</HashCode>
+      <FileName>menugame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHOOTMEUP123.MenuGameOver">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAABAAAACAAAASACAYAAAAAGAAAAAAAAA=</HashCode>
+      <FileName>MenuGameOver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
